@@ -1,0 +1,59 @@
+{% extends 'testapp/base.html'%}
+{% block title%}Checkout{% endblock title%}
+{% block content%}
+  <div class="">
+    <div class="col-lg-5 info">
+      <div class="">
+        <h2 align="center" >Order Summery</h2>
+        <table >
+          <thead>
+            <th id="thh"></th>
+            <th id="thh"><strong><h3>Item</h3></strong></th>
+            <th id="thh"><strong><h3>Price</h3></strong></th>
+            <th id="thh"><strong><h3>Quantity</h3></strong></th>
+            <th id="thh"><strong><h3>Total</h3></strong></th>
+            <hr>
+          </thead>
+          {% for item in items%}
+          <tr>
+            <td><img height="75px" width="100px" src="{{item.product.imageURL}}" alt="Unable to Load"></td>
+            <td>{{item.product.name}}</td>
+            <td>{{item.product.price}}</td>
+            <td>{{item.quantity}}</td>
+            <td>{{item.get_total}}</td>
+          </tr>
+          {%endfor%}
+        </table><br>
+        <h3>Total Items : {{order.get_cart_items}}</h3>
+        <h3>Amount Payable : {{order.get_cart_total}}</h3>
+      </div>
+    </div>
+
+
+    <div class="col-lg-6   info">
+      <form class="Checkoutform" method="post">
+        {% csrf_token %}
+        <div class="col-sm-5 Checkoutform">
+        <h2>User Information</h2>
+        <hr>
+        <input  type="text" name="name" placeholder="Name..."><br><br>
+        <input type="email" name="email" placeholder="Email.."><br><br>
+        <input type="text" name="email" placeholder="Contact Number.."><br><br>
+        </div
+        >
+        <div class="col-sm-6 Checkoutform">
+          <h2>Shipping Information</h2>
+          <hr>
+          <input  type="text" name="Address" placeholder="Address..."><br><br>
+          <input  type="text" name="City" placeholder="City..."><br><br>
+          <input  type="text" name="State" placeholder="State..."><br><br>
+          <input  type="text" name="Code" placeholder="Code..."><br><br>
+        </div>
+        <div class="col-sm-12">
+            <input type="Submit" class="btn btn-success btn-lg btn-block" name="" value="Confirm Order">
+        </div>
+      </form>
+    </div>
+  </div>
+  </div>
+{% endblock content%}

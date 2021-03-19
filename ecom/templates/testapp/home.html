@@ -1,0 +1,17 @@
+{% extends 'testapp/base.html'%}
+{% load static %}
+{% block title%}Home{% endblock title%}
+{% block content%}
+    <div class="row">
+      {% for product in products%}
+      <div class="col-lg-4 ">
+          <img class="thumbnail"src="{{product.imageURL}}" alt="Error">
+          <div class="box-element product">
+            <h4>{{product.name}}</h4><h4 float="right">{{product.price}} Rs</h4>
+            <button data-product="{{product.id}}" data-action="add" type="button" class="btn btn-info update-cart">Add to Cart</button>
+            <button type="button" class="btn btn-success">View</button>
+          </div>
+      </div>
+      {%endfor%}
+    </div>
+{% endblock content%}

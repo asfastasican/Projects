@@ -1,0 +1,36 @@
+{% extends "dataapp/base.html"%}
+{% block title%}Home{%endblock%}
+{% block content%}
+<div class="col-lg-10 products">
+    <div class="product_head">
+      <h1>Products Available</h1>
+      <hr>
+      </div>
+      <div class="product_table_center">
+      <a class="btn btn-primary"href="/add_product">Add New Product</a>
+      <table >
+        <thead>
+          <th></th>
+          <th><h4>Name</h4></th>
+          <th><h4>Product ID</h4></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </thead>
+        {% for pro in product%}
+        <tr>
+          <td><img height="125px" width="200px" src="{{pro.imageURL}}" alt="Unable to Load"></td>
+          <td>{{pro.name}}</td>
+          <td>{{pro.pid}}</td>
+          <td><a class="btn btn-success"href="">Update</a></td>
+          <td><a class="btn btn-info"href="/productinfo/{{pro.id}}">View</a></td>
+          <td><a class="btn btn-warning"href="/delete_product/{{pro.id}}">Delete</a></td>
+        </tr>
+        {%endfor%}
+      </table>
+      <br>
+      </div>
+      <div>
+</div>
+
+{% endblock%}

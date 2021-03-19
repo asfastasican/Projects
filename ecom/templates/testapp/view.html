@@ -1,0 +1,18 @@
+{% extends 'testapp/base.html'%}
+{% block title%}Checkout{% endblock title%}
+{% block content%}
+<div class="col-lg-10 viewtemp">
+  <h1>{{product.name}} Info</h1>
+  <div class="col-lg-6">
+    <img height="300px" width="450px" src="{{product.imageURL}}" alt="Unable to load Image">
+  </div>
+  <div class="col-lg-4 viewtempname">
+   <h2>Product Name : {{product.name}}</h2>
+   <h2>Product Price : {{product.price}}</h2>
+  </div>
+  <div class="col-lg-8">
+    <h3>  {{product.product_description}}</h3>
+  </div>
+</div>
+
+{%endblock%}

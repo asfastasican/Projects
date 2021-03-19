@@ -1,0 +1,25 @@
+{% extends 'testapp/base.html'%}
+{% block title%}Product View{% endblock title%}
+{% block content%}
+<div class="col-lg-8 addformmain">
+  <h2>Add New Product Details</h2><br>
+  <form method="post">
+    {% csrf_token%}
+    <div class="col-lg-3 addform">
+      {{form.name.label}} :<br><br>
+      {{form.price.label}} :<br><br><br>
+      {{form.product_description.label}} :<br><br><br><br><br><br><br><br><br><br><br><br>
+      {{form.image.label}} :
+    </div>
+    <div class="col-lg-3 addform">
+      {{form.name}} <br><br>
+      {{form.price}}<br><br>
+      {{form.product_description}}<br><br><br>
+      {{form.image}}
+      <br><br>
+      <input type="Submit" class='btn btn-primary btn-lg tron jim' name="" value="Add Product"><br>
+    </div>
+  </form>
+  {{form.errors}}
+</div>
+{%endblock%}

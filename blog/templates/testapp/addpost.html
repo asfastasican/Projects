@@ -1,0 +1,10 @@
+{% extends 'testapp/base.html'%}
+{% block title%}Add Post{% endblock%}
+{% block content%}
+<h1 id='heading'>Rinzler's Blog</h1>
+<form method="post">
+  {{form.as_p}}
+  <input type="submit" name="" value="Add Post">
+  {% csrf_token%}
+</form>
+{% endblock%}

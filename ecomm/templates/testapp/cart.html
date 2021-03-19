@@ -1,0 +1,45 @@
+{% extends 'testapp/base.html'%}
+{% block title%}Cart{% endblock title%}
+{% block content%}
+  <div class="cart-row">
+    <div class="col-lg-10 product">
+        <div class="head">
+          <a id="cart-left" href="{% url 'home'%}" type="button" class="btn btn-info">Back To Store</a>
+          <hr>
+          <br>
+
+          <div class="">
+            <h3>  Total Items in Cart : {{order.get_cart_items}}</h3>
+          <table >
+            <thead>
+              <th ></th>
+              <th><h4>Item</h4></th>
+              <th><h4>Price</h4></th>
+              <th><h4>Quantity</h4></th>
+              <th><h4>Total</h4></th>
+              <hr>
+            </thead>
+            {% for item in items%}
+            <tr>
+              <td><img height="100px" width="150px" src="{{item.product.imageURL}}" alt="Unable to Load"></td>
+              <td>{{item.product.name}}</td>
+              <td>{{item.product.price}}</td>
+              <td>{{item.quantity}}</td>
+              <td>{{item.get_total}}</td>
+              <td><a class="btn btn-warning"href="/delete_orderitem/{{item.id}}">Remove</a></td>
+            </tr>
+            {%endfor%}
+          </table>
+
+          <div>
+        </div>
+        <br>
+        <div class="foot">
+
+          <h2>Total Amount Payable :{{order.get_cart_total}} Rs</h2>
+          <a href="/checkout" class="btn btn-success btn-lg btn-block">Checkout</a>
+        </div>
+    </div>
+  </div>
+  </div>
+{% endblock content%}

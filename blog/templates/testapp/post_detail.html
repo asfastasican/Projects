@@ -1,0 +1,35 @@
+{% extends 'testapp/base.html'%}
+{% block title%}{{post.title}} detail{% endblock%}
+{% block content%}
+<h1 id='heading'>Rinzler's Blog</h1>
+   <h1>{{post.title}}</h1>
+  <p id='date'>Published on {{post.publish}} by {{post.author}}</p>
+  {{post.body|linebreaks}}
+  <div class="container" align='center'>
+    <button type="button"  class='btn btn-primary btn-lg'name="button"><a href="/deletepost/{{post.id}}">Delete Post</a></button>
+    <a class='btn btn-primary btn-lg' target='_blank' href="/email/{{post.id}}">Share By Email</a>
+  </div>
+
+  {% with comments.count as comments_count%}
+  <h2>{{comments_count}} Comment{{comments_count|pluralize}}</h2>
+  {%endwith%}
+
+  {% if comments%}
+  {% for comment in comments%}
+  <p id=cmthead>Comment No {{forloop.counter}} By {{comment.name}} on {{comment.created}}</p>
+  <p id=cmtbody>{{comment.body}}</p>
+  {% endfor%}
+  {%else%}
+  <p>No Comments on this Post Yet</p>
+  {% endif%}
+
+  {% if csubmit%}
+  <h2>your Comment Submitted Sucessfully</h2>
+  {%else%}
+  <form method="post">
+    {{form.as_p}}
+    {% csrf_token%}
+    <input type="submit" class='btn btn-primary btn-lg' name="" value="Submit Comment">
+  </form>
+ {%endif%}
+{% endblock%}

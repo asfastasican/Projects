@@ -1,0 +1,16 @@
+{% extends 'dataapp/base.html'%}
+{% block title%}Add Medical{%endblock%}
+{%block content%}
+<form  method="post">
+  <table border=1px solid red>
+  {{form}}
+  </table>
+  {% csrf_token%}
+  <input type="submit" name="" value="Add Medical">
+</form>
+{% endblock%}
+
+{%block sideconent%}
+<a href="/addmedical/">Add Medical</a><br>
+<a href="/updatemedical">Update Medical</a>
+{%endblock%}

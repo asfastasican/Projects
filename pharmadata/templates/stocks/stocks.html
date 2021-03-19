@@ -1,0 +1,34 @@
+{% extends "dataapp/base.html"%}
+{% block title%}Home{%endblock%}
+{% block content%}
+<div class="col-lg-10 products">
+    <div class="product_head">
+      <h1>Products Available</h1>
+      <hr>
+      </div>
+      <div class="">
+        <table >
+          <thead>
+            <th></th>
+            <th><h4>Name</h4></th>
+            <th><h4>Product ID</h4></th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </thead>
+        {% for stock in stockes%}
+        <tr>
+          <td>{{stock.product}}</td>
+          <td>{{stock.Maximum_quantity}}</td>
+          <td>{{stock.current_quantity}}</td>
+          <td><a class="btn btn-success"href="">Update</a></td>
+          <td><a class="btn btn-info"href="/productinfo/{{pro.id}}">View</a></td>
+          <td><a class="btn btn-warning"href="/delete_product/{{pro.id}}">Delete</a></td>
+        </tr>
+
+        {% endfor%}
+      </div>
+      <div>
+</div>
+
+{% endblock%}

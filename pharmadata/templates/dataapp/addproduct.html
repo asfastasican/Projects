@@ -1,0 +1,27 @@
+{% extends 'dataapp/base.html'%}
+{% block title%}Add Product{%endblock%}
+{%block content%}
+<div class="col-lg-8 products">
+  <div class="product_head">
+  <h2>Add New Product Details</h2><br>
+  </div>
+  <hr>
+  <form method="post">
+    {% csrf_token%}
+    <div class="col-lg-3 addform">
+      {{form.name.label}} :<br><br>
+      {{form.pid.label}} :<br><br><br>
+      {{form.description.label}} :<br><br><br><br><br><br><br><br><br><br><br><br>
+      {{form.image.label}} :
+    </div>
+    <div class="col-lg-3 addform">
+      {{form.name}} <br><br>
+      {{form.pid}}<br><br>
+      {{form.description}}<br><br><br>
+      {{form.image}}
+      <br><br>
+      <input type="Submit" class='btn btn-primary btn-lg' name="" value="Add Product"><br>
+    </div>
+  </form>
+</div>
+{% endblock%}

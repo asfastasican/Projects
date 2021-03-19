@@ -1,0 +1,40 @@
+{% extends 'dataapp/base.html'%}
+{% block title%}Doctor{%endblock%}
+{%block content%}
+<h1>Doctor Detail</h1>
+<table border=2px>
+<thead>
+<th>DoctorName</th>
+<th>HospitalName</th>
+<th>DLicense</th>
+<th>Contactno</th>
+<th>Email</th>
+<th>Address</th>
+<th>City</th>
+<th>PinCode</th>
+<th>State</th>
+<th>Actions</th>
+</thead>
+{% for doc in doctor%}
+<tr>
+<td><a href="/doctorinfo/{{doc.id}}">{{doc.DoctorName}}</a></td>
+<td>{{doc.HospitalName}}</td>
+<td>{{doc.DLicense}}</td>
+<td>{{doc.Contactno}}</td>
+<td>{{doc.Email}}</td>
+<td>{{doc.Address}}</td>
+<td>{{doc.City}}</td>
+<td>{{doc.PinCode}}</td>
+<td>{{doc.State}}</td>
+<td><a href="/updatedoc/{{doc.id}}">Update</a>/<a href='/deletedoctor/{{doc.id}}'>Delete</a></td>
+</tr>
+{% endfor%}
+</table>
+<br>
+<a  border='1px red solid' href="/adddoctor" class='btn btn-sucess btn-lg'>Add Doctor</a>
+{%endblock%}
+
+{%block sideconent%}
+<a href="/adddoctor">Add Doctor</a><br>
+<a href="/updatedoc">Update Doctor</a>
+{%endblock%}

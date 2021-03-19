@@ -1,0 +1,40 @@
+{% extends 'dataapp/base.html'%}
+{% block title%}Organization{%endblock%}
+{%block content%}
+<h1>Organization Detail</h1>
+<table border=2px>
+<thead>
+<th>Org Name</th>
+<th>Owner Name</th>
+<th>License</th>
+<th>Contactno</th>
+<th>Email</th>
+<th>Address</th>
+<th>City</th>
+<th>PinCode</th>
+<th>State</th>
+<th>Actions</th>
+</thead>
+{% for org in organization%}
+<tr>
+<td><a href="/orginfo/{{org.id}}">{{org.OrgName}}</a></td>
+<td>{{org.OwnerName}}</td>
+<td>{{org.OLicense}}</td>
+<td>{{org.Contactno}}</td>
+<td>{{org.Email}}</td>
+<td>{{org.Address}}</td>
+<td>{{org.City}}</td>
+<td>{{org.PinCode}}</td>
+<td>{{org.State}}</td>
+<td><a href="/updateorg/{{org.id}}">Update</a>/<a href='/deleteorg/{{org.id}}'>Delete</a></td>
+</tr>
+{% endfor%}
+</table>
+<br>
+<a  border='1px red solid' href="/addorg" class='btn btn-sucess btn-lg'>Add Organization</a>
+{%endblock%}
+
+{%block sideconent%}
+<a href="/addorg">Add Org</a><br>
+<a href="/updateorg">Update Org</a>
+{%endblock%}

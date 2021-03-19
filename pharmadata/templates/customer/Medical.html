@@ -1,0 +1,40 @@
+{% extends 'dataapp/base.html'%}
+{% block title%}Medical{%endblock%}
+{%block content%}
+<h1>Medical Detail</h1>
+<table border=2px>
+<thead>
+<th>Medical Name</th>
+<th>Owner Name</th>
+<th>License</th>
+<th>Contactno</th>
+<th>Email</th>
+<th>Address</th>
+<th>City</th>
+<th>PinCode</th>
+<th>State</th>
+<th>Actions</th>
+</thead>
+{% for med in medical%}
+<tr>
+<td><a href="/medicalinfo/{{med.id}}">{{med.MedicalName}}</a></td>
+<td>{{med.MownerName}}</td>
+<td>{{med.MLicense}}</td>
+<td>{{med.Contactno}}</td>
+<td>{{med.Email}}</td>
+<td>{{med.Address}}</td>
+<td>{{med.City}}</td>
+<td>{{med.PinCode}}</td>
+<td>{{med.State}}</td>
+<td><a href="/updatemed/{{med.id}}">Update</a>/<a href='/deletemed/{{med.id}}'>Delete</a></td>
+</tr>
+{% endfor%}
+</table>
+<br>
+<a  border='1px red solid' href="/addmedical" class='btn btn-sucess btn-lg'>Add Medical</a>
+{%endblock%}
+
+{%block sideconent%}
+<a href="/addmedical">Add Medical</a><br>
+<a href="/updatemedical">Update Medical</a>
+{%endblock%}

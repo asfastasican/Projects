@@ -1,0 +1,11 @@
+{% extends 'testapp/base.html'%}
+{% block title%}Home{% endblock%}
+{% block content%}
+<h1 id='heading'>Rinzler's Blog</h1>
+ {% for po in posts%}
+  <a  id='linktitle'  href="/detail/{{po.id}}"><h2>{{po.title}}</h2></a>
+  <p id='date'>Published on {{po.publish}} by {{po.author}}</p>
+  <span id='bodychange'>{{po.body|truncatewords:30|linebreaks}}</span>
+ {% endfor%}
+ {% include 'testapp/pagination.html' with page=posts%}
+{% endblock%}

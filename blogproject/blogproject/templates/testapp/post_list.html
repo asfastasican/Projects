@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+{%extends 'testapp/base.html'%}
+{% block title%}Home Page{% endblock%}
+  {% block content%}
+    {% for posts in post%}
+      {{posts.title}}
+    {% endfor%}
+  {%endblock%}

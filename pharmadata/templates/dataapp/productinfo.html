@@ -1,0 +1,18 @@
+{% extends 'dataapp/base.html'%}
+{% block title%}Product Info{%endblock%}
+
+{%block content%}
+<div class="col-lg-10 viewtemp">
+  <h2>{{info.name}}</h2>
+  <div class="col-lg-6">
+    <img height="300px" width="450px" src="{{product.imageURL}}" alt="Unable to load Image">
+  </div>
+  <div class="col-lg-4 viewtempname">
+   <h4>Product Name : {{product.name}}</h4>
+   <h4>Product Pid : {{product.pid}}</h4>
+   <h4>Product Contents : {{product.contents}}</h4>
+  </div>
+  <div class="col-lg-8 viewtemp">
+    <h4>{{product.description}}</h4>
+  </div>
+{%endblock%}

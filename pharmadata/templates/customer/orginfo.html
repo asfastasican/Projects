@@ -1,0 +1,20 @@
+{% extends 'dataapp/base.html'%}
+{% block title%}Organization Info{%endblock%}
+
+{%block content%}
+<h1>{{info.OwnerName}}</h1>
+<h2>{{info.OLicense}}</h2>
+<h3>{{info.Contactno}}</h3>
+<h3>{{info.Email}}</h3>
+<p>{{indo.OrgName}}</p>
+<p>{{indo.Address}}</p>
+<p>{{indo.City}}</p>
+<p>{{indo.State}}</p>
+<p>{{indo.PinCode}}</p>
+
+{%endblock%}
+
+{%block sideconent%}
+<a href="/addorg">Add Org</a><br>
+<a href="/updateorg">Update Org</a>
+{%endblock%}

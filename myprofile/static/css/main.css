@@ -1,0 +1,126 @@
+body
+{
+  background-image:url("https://images.unsplash.com/photo-1535444933152-4c53d0667616?ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80");
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position:right;
+}
+
+.sidebar
+{
+  height: 850px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  background:rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+}
+
+.titlename
+{
+  font-family: 'Patua One', cursive;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top:20px;
+}
+.profilepic
+{
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 30px;
+  margin-top:30px;
+}
+
+.profiletitle
+{
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+
+.contacthead
+{
+  font-family: 'Lobster', cursive;
+}
+.interesthead
+{
+  font-family: 'Lobster', cursive;
+}
+
+.interests
+{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.aboutme
+{
+  margin-right: 25px;
+  margin-left: 25px;
+}
+
+.objpara
+{
+
+  margin-top: 30px;
+  text-align: center;
+  color: black;
+  font-family: 'DM Serif Text', serif;
+  height: 150px;
+  margin-left: 10px;
+}
+
+.project1
+{
+  font-family: 'DM Serif Text', serif;
+  background-color: rgba(255,0,0,0.6);
+  color: white;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 375px;
+}
+
+.Projecthead
+{
+  font-family: 'Raleway', sans-serif;
+  background-color: #000080;
+  opacity: 0.6;
+  color: white;
+  height: 200px;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size-adjust: auto;
+}
+.phead
+{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 50px;
+}
+.row
+{
+  margin-top: 20px;
+}
+
+.projectx
+{
+  font-family: 'DM Serif Text', serif;
+  background-color: rgba(255,0,0,0.6);
+  color: white;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 200px;
+}
+
+.skills
+{
+  font-family: 'Lobster', cursive;
+  text-align: center;
+}

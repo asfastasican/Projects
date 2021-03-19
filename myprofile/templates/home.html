@@ -1,0 +1,145 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Patua+One&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="col-sm-12">
+      <div class="col-sm-3 sidebar">
+        <div class="profilepic">
+          <img height="200px" width="200px" src="{% static 'images/profilepic.jpg' %}" alt="unable to load">
+        </div>
+        <div class="titlename">
+          <h3>Hey, I'm Akshay!</h3>
+          <h5>Pune,Maharashtra.</h5>
+        </div><hr>
+        <div class="skills">
+          <h4>Skills</h4>
+        </div>
+        <div class="profiletitle">
+          <h6>Django_Python_Selenium_Testing_Bootstrap</h6>
+          <h6>RestAPI_SQL_JavaScript_jQuery</h6>
+        </div><hr>
+
+        <div class="red">
+        <div class="contacthead">
+          <h4>Get in touch @</h4>
+        </div>
+        <div class="contactlinks">
+          <h6><img height="30px" width="30px" src="{% static "images/contactlogo.jpg" %}" alt="Unable to load"> +918668348534</h6>
+          <h6><img height="30px" width="30px" src="{% static "images/linkedinlogo.jpg" %}" alt="Unable to load"><a href="https://www.linkedin.com/in/akshay-shelke-56a869148/">  linkedin</a></h6>
+          <h6><img height="30px" width="30px" src="{% static "images/github.png" %}" alt="Unable to load"><a href="https://github.com/asfastasican">  Github</a></h6>
+          <h6><img height="30px" width="30  px" src="{% static "images/gmail.jpg" %}" alt="Unable to load"> akshayshelke771@gmail.com</h6>
+        </div>
+        <hr>
+        <div class="interesthead">
+          <h4>Interest</h4>
+        </div>
+        <div class="interests">
+          <h6><img height="20px" width="25px" src="{% static "images/trekking.jpg" %}" alt="Unable to load">Trekking</h6>
+          <h6><img height="20px" width="25px" src="{% static "images/cooking.jpg" %}" alt="Unable to load">cooking</h6>
+          <h6><img height="20px" width="25px" src="{% static "images/photography.jpg" %}" alt="Unable to load">Photography</h6>
+        </div>
+        <div class="interesthead">
+        <a href="https://www.instagram.com/the_mj_tron/"><img height="25px" width="30px" src="{% static 'images/insa.jpg' %}" alt="Unable to load"> Check my snaps here</a>
+        </div>
+      </div>
+      </div>
+      <div class="col-sm-9 content">
+        <div class="row-1">
+          <div class="col-sm-3 aboutme">
+            <img height="200px" width="200px" src="{% static 'images/aboutme.jpeg' %}" alt="Unable to load">
+          </div>
+          <div class="col-sm-8 objpara">
+            <h4>OBJECTIVE</h4>
+            <p>Looking for a challenging role in a reputed organization to utilize my technical, database, and management skills for the growth of the organization as well as to enhance my knowledge where I can grow professionally and personally.</p>
+          </div>
+        </div>
+        </div>
+
+
+
+        <div class="row-2">
+          <div class="col-sm-4 Projecthead ">
+          <div class="phead">
+            <h2>Experience</h2>
+            <h4>and</h4>
+            <h2>Projects</h2>
+          </div>
+          </div>
+          <div class="col-sm-4 projectx">
+            <h4>1.DB Xento Systems </h4>
+            <h6>Domain-Property Management,Finance,Maintenance.</h6>
+            <h6>Details-An application used by property managers in United States of America to manage their properties,keep the track of profit and expenses also allowing users to raise a maintenance request and collecting data in reports.</h6>
+            <h6>Technology used-Selenium,Postman,Manual Testing</h6>
+            <h4>Project URL-https://www.entrata.com/</h4>
+          </div>
+        </div>
+
+        <div class="row-2">
+          <div class="col-sm-4 project1">
+            <h4>2.BGL</h4>
+            <h6>Domain-Pharmacy</h6>
+            <div class="projimage">
+            <img height="150px" width="250px" src="{% static 'images/bgl.jpg' %}" alt="unable to load">
+          </div>
+            <h6>Details-An application which can store and process data and present visualized data to keep track of Customers,Products and Stockes of Organization.</h6>
+            <h6>Technology used-Django,Python,Bootstrap,Bokeh,HTML,CSS.</h6>
+            <h5><a  class="btn btn-warning" href="https://github.com/asfastasican/Projects/tree/master/Phantom%20Pharma" style="color:white">  Check Code here</a></h5>
+          </div>
+        </div>
+
+        <div class="row-3">
+          <div class="col-sm-4 project1">
+            <h4>3.Ecommerce</h4>
+            <h6>Domain-Ecommerce</h6>
+            <div class="projimage">
+              <img height="150px" width="250px" src="{% static 'images/ecom.png' %}" alt="unable to load">
+            </div>
+            <h6>Details- An application based on Django, Python using HTML, CSS and Bootstrap build for small wholesale and local markets to sell their products. The application pull products data from database and display in home page so user can select and put in cart and checkout items by filling contact information.</h6>
+            <h6>Technology used-Django,Python,Bootstrap,Bokeh,HTML,CSS.</h6>
+            <h5><a  class="btn btn-warning" href="https://github.com/asfastasican/Projects/tree/master/Ecommerce" style="color:white">  Check Code here</a></h5>
+          </div>
+        </div>
+
+        <div class="row-3">
+          <div class="col-sm-4 project1">
+            <h4>4.Blog</h4>
+            <h6>Domain-Social.</h6>
+            <div class="projimage">
+              <img height="150px" width="250px" src="{% static 'images/blog.png' %}" alt="unable to load">
+            </div>
+            <h6>Details-  An application built using Django framework and Python used to write a content on blog. Application is made using Django, python, HTML, CSS and bootstrap. It also consist of Pagination to adjust posts on home page and Sharing the content using Email. The blog also allows its readers to comment on post..</h6>
+            <h6>Technology used-Selenium,Postman,Manual Testing</h6>
+            <h5><a class="btn btn-warning" href="https://github.com/asfastasican/Projects/tree/master/blog" style="color:white">  Check Code here</a></h5>
+          </div>
+      </div>
+
+        <div class="row-3">
+          <div class="col-sm-4 project1">
+            <h4>5.Weather</h4>
+            <h6>Domain-Weather forecasting,API</h6>
+            <div class="projimage">
+              <img height="150px" width="250px" src="{% static 'images/weather.png' %}" alt="unable to load">
+            </div>
+            <h6>Details-  A simple application dashboard developed using Open Weather Map API. User can search the desired location current weather conditions and get result on dash board. </h6>
+            <h6>Technology used-API,Django,Python</h6>
+            <h5><a class="btn btn-warning" href="https://github.com/asfastasican/Projects/tree/master/Weather%20Application/weather" style="color:white">  Check Code here</a></h5>
+          </div>
+      </div>
+
+    </div>
+      </div>
+    </div>
+  </body>
+</html>

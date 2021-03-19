@@ -1,0 +1,20 @@
+{% extends 'dataapp/base.html'%}
+{% block title%}Medical Info{%endblock%}
+
+{%block content%}
+<h1>{{info.MownerName}}</h1>
+<h2>{{info.MLicense}}</h2>
+<h3>{{info.Contactno}}</h3>
+<h3>{{info.Email}}</h3>
+<p>{{indo.MedicalName}}</p>
+<p>{{indo.Address}}</p>
+<p>{{indo.City}}</p>
+<p>{{indo.State}}</p>
+<p>{{indo.PinCode}}</p>
+
+{%endblock%}
+
+{%block sideconent%}
+<a href="/addmedical">Add Medical</a><br>
+<a href="/updatemedical">Update Medical</a>
+{%endblock%}

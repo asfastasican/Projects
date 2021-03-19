@@ -1,0 +1,41 @@
+{% extends "dataapp/base.html"%}
+{% block title%}Home{%endblock%}
+{% block content%}
+{% load static %}
+<div class="col-sm-12">
+  <div class="col-sm-2 sidebar">
+    <div class="logo">
+      <img height="150px" width="150px" src="{% static "images/logo.jpg" %}" alt="check Connection">
+    </div>
+    <h2 id="DashBoardtext">Fast Links<h2>
+      <hr>
+      <div class="fastlinks">
+      <a  class="btn btn-warning btn-sm btn-block" href="/add_product">Add Product</a>
+      <a  class="btn btn-warning btn-sm btn-block" href="/adddoctor">Add Doctor</a>
+      <a  class="btn btn-warning btn-sm btn-block" href="/addmedical">Add Medical</a>
+      <a  class="btn btn-warning btn-sm btn-block" href="/addorg">Add Organization</a>
+      <a  class="btn btn-warning btn-sm btn-block" href="/addstocks">Update Stocks</a>
+      <a  class="btn btn-warning btn-sm btn-block" href="#">Update Sales</a>
+      </div>
+  </div>
+
+  <div class="col-sm-4 homegraph Databar">
+      <h2 id="dashboardheading">Dash Board</h2>
+    <hr>
+    <h5>Sold Units : {{total_product_sale}}</h5>
+    <h5>Units in Stock : {{current_stock_total}}</h5>
+    <h5>Customer Count : {{customer_count}}</h5>
+    <h5>Product Count: {{product_count}}</h5>
+  </div>
+    <div class="col-sm-4 homegraph">
+      {{ div3 | safe }}
+    </div>
+
+    <div class="col-sm-4 homegraph">
+      {{ div | safe }}
+    </div>
+    <div class="col-sm-5 homegraph">
+      {{ div2 | safe }}
+    </div>
+</div>
+{% endblock%}
