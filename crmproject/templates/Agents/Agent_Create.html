@@ -1,0 +1,11 @@
+{% extends 'leads/base.html'%}
+{% block title%}Agent Create{% endblock %}
+{% block content%}
+<h1>We are inside Agent Create</h1><br>
+    <a href="{% url 'agentlist'%}" class="text-gray-500 hover:text-blue-500">Agent List</a><br>
+    <form method='post'>
+    {{form.as_p}}
+    {% csrf_token%}
+    <input type='submit' value='Submit' name='submit'>
+    </form>
+{% endblock %}

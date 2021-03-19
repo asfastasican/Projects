@@ -1,0 +1,10 @@
+{% extends 'leads/base.html'%}
+{% block title%}Create{% endblock %}
+{% block content%}
+<h1>We are inside Lead Create</h1>
+    <form method='post'>
+    {{form.as_p}}
+    {% csrf_token%}
+    <input type='submit' value='Submit' name='submit'>
+    </form>
+{% endblock %}
